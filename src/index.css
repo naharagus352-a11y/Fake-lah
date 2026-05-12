@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #ff0000;
+  --color-brand-green: #00ff00;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg-dark: #121212;
+  --card-dark: #1e1e1e;
+  --text-white: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden; /* Avoid scrolling on Android for better "App" feel */
+}
+
+.hardware-bg {
+  background: radial-gradient(circle at center, #2a2a2a 0%, #121212 100%);
+}
+
+.red-white-gradient {
+  background: linear-gradient(135deg, #ff0000 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-red {
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+}
+
+.draggable-handle {
+  touch-action: none;
+}
+
+/* Scrollbar styling for modern hardware look */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
